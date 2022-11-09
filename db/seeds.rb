@@ -15,16 +15,24 @@ utawezana = Album.create(name: "Utawezana")
 
 
 puts "Creating artists..."
-joeboy = Artist.create(name: "Joeboy")
-mejja = Artist.create(name: "Mejja (Okonkwo)")
-diamond = Artist.create(name: "Diamond Platnumz")
-zuchu = Artist.create(name: "Zuchu")
+joeboy = Artist.create(full_name: "Joeboy")
+mejja = Artist.create(full_name: "Mejja Okonkwo")
+diamond = Artist.create(full_name: "Diamond Platnumz")
+zuchu = Artist.create(full_name: "Zuchu")
 
 
 puts "Creating genres..."
 bongo = Genre.create(name: "Bongo")
 nigerian = Genre.create(name: "Nigerian")
 genge = Genre.create(name: "Genge")
+
+puts "Creating songs..."
+
+song1 = Song.create(title: "Superstar", description: "Costa Titch and Diamond Platnumz", img_url: "https://i0.wp.com/xclusiveloaded.com/wp-content/uploads/2022/10/Superstar.jpg?fit=854%2C480&ssl=1", artist_id: diamond.id , genre_id: nigerian.id , album_id: superstar.id)
+song2 = Song.create(title: "Sip (Alcohol)", description: "Song by Joeboy" , img_url: "https://www2.beatzjam.com/wp-content/uploads/2021/10/0-31.jpg", artist_id: joeboy.id, genre_id: nigerian.id, album_id: sip.id)
+song3 = Song.create(title: "Sukari", description: "Song by Zuchu", img_url: "https://bekaboy.com/wp-content/uploads/2021/01/Sukari-VIDEO-640x321.jpg", artist_id: zuchu.id, genre_id: bongo.id, album_id: sukari.id)
+song4 = Song.create(title: "Utawezana", description: "Femi One X Mejja", img_url: "https://notjustok.com/eastafrica/wp-content/uploads/sites/3/2020/04/Femi-One-ft.-Mejja-Utawezana.png", artist_id: mejja.id, genre_id: genge.id, album_id: utawezana.id)
+
 
 
 
@@ -46,12 +54,6 @@ Review.create(rating: 5, song_id: song1.id, comment: "I listen every day")
 Review.create(rating: 1, song_id: song1.id, comment: "What is this?")
 
 
-puts "Creating songs..."
-
-song1 = Song.create(title: "Superstar", description: "Costa Titch and Diamond Platnumz", img_url: "https://i0.wp.com/xclusiveloaded.com/wp-content/uploads/2022/10/Superstar.jpg?fit=854%2C480&ssl=1", artist_id: diamond.id , genre_id: nigerian.id , album_id: superstar.id)
-song2 = Song.create(title: "Sip (Alcohol)", description: "Song by Joeboy" , img_url: "https://www2.beatzjam.com/wp-content/uploads/2021/10/0-31.jpg", artist_id: joyboy.id, genre_id: nigerian.id, album_id: sip.id)
-song3 = Song.create(title: "Sukari", description: "Song by Zuchu", img_url: "https://bekaboy.com/wp-content/uploads/2021/01/Sukari-VIDEO-640x321.jpg", artist_id: zuchu.id, genre_id: bongo.id, album_id: sukari.id)
-song4 = Song.create(title: "Utawezana", description: "Femi One X Mejja", img_url: "https://notjustok.com/eastafrica/wp-content/uploads/sites/3/2020/04/Femi-One-ft.-Mejja-Utawezana.png", artist_id: mejja.id, genre_id: genge.id, album_id: utawezana.id)
 
 
 puts "✅ Done seeding!"
