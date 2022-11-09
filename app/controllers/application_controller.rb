@@ -1,9 +1,17 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
-  
   # Add your routes here
-  get "/" do
-    { message: "Good luck with your project!" }.to_json
+  get '/' do 
+    "Hello World"
   end
-
+  get "/songs" do
+    songs = Song.all
+    songs.to_json
+    # (include: [:albums, :artists, :genres, :reviews])
+  end
+get '/songs/:id' do
+  song = Song.find(params[:id])
+  song.to_json
+  # (include: [:albums, :artists, :genres, :reviews])
+ end
 end
