@@ -14,4 +14,12 @@ get '/songs/:id' do
   song.to_json
   # (include: [:albums, :artists, :genres, :reviews])
  end
+# method to delete song item
+ delete '/songs/:id' do
+  song = Song.find(params[:id])
+  song.destroy
+  # (include: [:albums, :artists, :genres, :reviews])
+ end
+
+# method to handle a post request
 end
