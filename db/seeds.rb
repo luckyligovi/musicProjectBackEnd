@@ -12,8 +12,8 @@ superstar = Album.create(name: "Superstar" )
 sip = Album.create(name: "Sip (Alcohol)" )
 sukari = Album.create(name: "Sukari" )
 utawezana = Album.create(name: "Utawezana")
-its only me = Album.create(name: "Its only me")
-Legend = Album.create(name: "Legend")
+itsonlyme = Album.create(name: "Its only me")
+legend = Album.create(name: "Legend")
 
 
 puts "Creating artists..."
@@ -22,7 +22,7 @@ mejja = Artist.create(full_name: "Mejja Okonkwo")
 diamond = Artist.create(full_name: "Diamond Platnumz")
 zuchu = Artist.create(full_name: "Zuchu")
 lilbaby = Artist.create(full_name: "Lil Baby")
-Bobmarley = Artist.create(full_name: "Bob Marley")
+bobmarley = Artist.create(full_name: "Bob Marley")
 
 
 puts "Creating genres..."
