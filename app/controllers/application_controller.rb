@@ -24,13 +24,12 @@ class ApplicationController < Sinatra::Base
   # method to handle a post request
   post '/songs' do 
    Song.create(
-    id: params[:id],
     title:params[:title],
     description:params[:description],
     img_url:params[:img_url],
-    artist_id: params[:artist_id],
-    genre_id: params[:genre_id],
-    album_id: params[:album_id]
+    artist_id: artist.id,
+    genre_id: genre.id,
+    album_id: album.id
   )
     redirect "/songs" 
 
